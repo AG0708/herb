@@ -858,7 +858,7 @@ module Herb
       def ensure_parallel!
         return if defined?(Parallel)
 
-        Herb.ensure_installed { gem "parallel" } # steep:ignore
+        Herb.ensure_installed("parallel")
       end
 
       def collect_ruby_render_references
